@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1">
+		<title>CHOIXON</title>
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="SGP_PROJECT(2) (1).css">
+</head>
+	<body>
+		
+		<div class="smooth">			
+			<div class="header">
+				<ul>
+					
+						<li><a href="#home">Home</a></li>
+						<li><a href="#Login">Login</a></li>
+						<li><a href="#About">About Us</a></li>
+						<li><a href="#Contact">Contact Us</a></li>		
+				</ul>
+			</div>
+
+
+			<section id="home">
+			
+			<div id="section1">
+		<div>
+         <h1 class="ch" style="font-size: 100px; font-family:Lucida Console ;">
+            <span style="color:white">cho</span><span style="color:white">ix</span><span style="color:rgb(247, 76, 161)">on</span></h1></div>
+
+		
+		<div class="searchBox"  style=" margin-top:20px;">
+
+                <input class="searchInput" id="search_item" type="text" name="" placeholder="Search">
+                <button class="searchButton" onclick="gotofunction()" href="#">
+                    <i class="material-icons">
+                        search
+                    </i>
+                </button>
+                <script>
+                  function gotofunction() {
+                    window.location.href = "http://localhost:4002/index2/"+document.getElementById("search_item").value;
+                  }
+                </script>
+         </div>
+        </div>
+			</section>
+
+
+
+			<section id="Login">
+				<div class="wrap">
+		<h1 class="h">Log In With</h1>
+		 <div class="social-media">
+		 	<button class="b"><a href="#"><i class="fa fa-facebook"></i> Facebook</a></button>	
+		 	<button class="b"><a href="#"><i class="fa fa-google"></i>  	Google</a></button>	 	
+		 </div>	
+		 	<form action="">
+		 	<label class="up"> Username:</label><br>
+		 		<input class="c" type="text">
+		 			<label class=up> Password:</label><br>
+		 				<input  class="c" type="Password">
+		 					<input class="c" type="submit" value="Log In">
+
+		 	</form>
+
+		 <p>Not a Member?<a href="Sign_up.html"> Sign Up Now</a></p>	
+
+	</div>
+
+			</section>
+
+			<section id="About">
+			
+				<div class="row">
+  <div class="col-sm-5">
+ 
+    <!-- normal -->
+    <div class="ih-item circle effect3 left_to_right"><a href="#">
+        <div class="img"><img src="4.jpg" alt="img"></div>
+        <div class="info">
+          <h3>Patel Meet D.</h3>
+          <p>Description goes here</p>
+        </div></a></div>
+    <!-- end normal -->
+ 
+  </div>
+  
+  <div class="col-sm-6">
+ 
+    <!-- normal -->
+    <div class="ih-item circle effect3 left_to_right"><a href="#">
+        <div class="img"><img src="5.jpg" alt="img"></div>
+        <div class="info">
+          <h3>Keya Bhavsar</h3>
+          <p>Description goes here</p>
+        </div></a></div>
+    <!-- end normal -->
+ 
+  </div>
+
+  <div class="col-sm-7">
+ 
+    <!-- normal -->
+    <div class="ih-item circle effect3 left_to_right"><a href="#">
+        <div class="img"><img src="5.jpg" alt="img"></div>
+        <div class="info">
+          <h3>Janvi Solanki</h3>
+          <p>Description goes here</p>
+        </div></a></div>
+    <!-- end normal -->
+ 
+  </div>
+
+  <div class="col-sm-8">
+ 
+    <!-- normal -->
+    <div class="ih-item circle effect3 left_to_right"><a href="#">
+        <div class="img"><img src="4.jpg" alt="img"></div>
+        <div class="info">
+          <h3>Patel Utsav</h3>
+          <p>Description goes here</p>
+        </div></a></div>
+    <!-- end normal -->
+ 
+  </div>
+  
+  <!--  -->
+</div>
+
+			</section>
+
+			<section id="Contact">
+			<h2>CONTACT SECTION</h2>
+			</section>
+
+		</div>
+
+
+
+
+
+	
+	</body>
+  </html>	
+ 

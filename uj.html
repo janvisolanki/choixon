@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+     
+    <style>
+    
+body {
+  
+    font-family: 'Roboto Condensed', sans-serif;  
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+.menu {
+  height: 70px;
+  width: 70px;
+  right: 70px;
+  top: 30px;
+  text-align: center;
+  position: fixed;
+  background: #fff;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  z-index: 999;
+}
+.menu.active {
+  width: calc(100% - 140px);
+}
+.menu.active .menuContent * {
+  opacity: 1;
+}
+.menu.active span i:nth-child(1) {
+  transform: rotate(-45deg) translate(-50%, -50%);
+  top: 50%;
+}
+.menu.active span i:nth-child(2) {
+  transform: translateX(-100px);
+  opacity: 0;
+}
+.menu.active span i:nth-child(3) {
+  transform: rotate(45deg) translate(-50%, -50%);
+  top: 50%;
+}
+.menu span {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  background: #fff;
+  z-index: 1;
+}
+.menu span i {
+  position: absolute;
+  transform-origin: 50% 50%;
+  width: 45%;
+  height: 2px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #ccc;
+  transition: transform 0.3s ease, opacity 0.1s ease 0.1s;
+}
+.menu span i:nth-child(1) {
+  top: 40%;
+}
+.menu span i:nth-child(2) {
+  top: 50%;
+}
+.menu span i:nth-child(3) {
+  top: 60%;
+}
+.menu .menuContent {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 40px;
+  right: 0px;
+  text-align: center;
+}
+.menu .menuContent * {
+  opacity: 0;
+}
+.menu .menuContent ul li {
+  display: inline-block;
+  margin-left: 50px;
+  margin-right: 50px;
+  color: #2d3235;
+  transition: opacity 0.3s ease 0.3s;
+  cursor: pointer;
+  position: relative;
+}
+.menu .menuContent ul li:hover:before {
+  opacity: 0.8;
+  top: 13px;
+  left: 20px;
+}
+.menu .menuContent ul li:hover:after {
+  opacity: 0.8;
+  bottom: 13px;
+  left: -20px;
+}
+.menu .menuContent ul li:before, .menu .menuContent ul li:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background: #ccc;
+  transition: all 0.3s ease;
+}
+.menu .menuContent ul li:before {
+  transform: rotate(-55deg);
+  left: 60px;
+  top: -30px;
+  opacity: 0;
+  right: 0;
+  margin: auto;
+}
+.menu .menuContent ul li:after {
+  transform: rotate(-55deg);
+  left: -60px;
+  bottom: -30px;
+  opacity: 0;
+  right: 0;
+  margin: auto;
+}
+#home{
+
+background-image: url(B.jpg);
+background-size: cover;
+}
+#About{
+
+background-image: url(https://images.unsplash.com/photo-1528747045269-390fe33c19f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80);
+background-size: cover;
+background-position: center;
+}
+#Login{
+background-image: url(https://images.unsplash.com/photo-1520188740392-665a13f453fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1867&q=80);
+background-size: cover;
+background-color:black;
+}
+
+#Contact{
+
+background-color: black;
+background-image: url(https://images.unsplash.com/photo-1490814525860-594e82bfd34a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1413&q=80);
+background-size: cover;
+}
+}
+
+#section1{
+    height: 800px;
+  background-size: cover;
+  display: inline-block;
+  width: 100%;    
+}
+.ch{
+        text-align:center;
+        position:absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+}
+
+.searchBox {
+position: absolute;
+top: 50%;
+left: 50%;
+transform:  translate(-50%,50%);
+background: #2f3640;
+height: 60px;
+border-radius: 40px;
+padding: 10px;
+
+}
+
+.searchBox:hover > .searchInput {
+width: 240px;
+padding: 0 6px;
+}
+
+.searchBox:hover > .searchButton {
+background: white;
+color : #2f3640;
+}
+
+.searchButton {
+color: white;
+float: right;
+width: 40px;
+height: 40px;
+border-radius: 50%;
+background: #2f3640;
+display: flex;
+justify-content: center;
+align-items: center;
+transition: 0.4s;
+}
+
+.searchInput {
+border:none;
+background: none;
+outline:none;
+float:left;
+padding: 0;
+color: white;
+font-size: 16px;
+transition: 0.4s;
+line-height: 40px;
+width: 0px;
+}
+
+
+@media screen and (max-width: 620px) {
+.searchBox:hover > .searchInput {
+width: 150px;
+padding: 0 6px;
+}
+}
+
+/**{
+box-sizing: border-box;
+}
+body{
+
+background-color: grey;
+background-size: cover;
+}*/
+.wrap{
+
+max-width: 400px;
+margin: auto;
+margin-top: 120px;
+padding: 20px;
+font-family: sans-serif;
+background:#fff;
+border-radius: 10px;
+
+}
+
+.h{	
+font-size: 2em;
+text-align: center;
+color: black;
+
+}
+.b{
+
+padding: 10px;
+width:49%;
+box-sizing: border-box;
+border:none;
+font-size: 1.3em;
+border-radius: 10px;
+font-weight: bold;
+
+}
+/*#k
+{
+color: red;
+}*/
+.b a{
+
+text-decoration: none;
+color: #fff;			
+}
+.b:nth-child(1){
+
+background : #4d94ff;
+
+}
+.b:nth-child(2){
+
+background : #ff3333; 
+}
+.b:hover{
+background: rgba(0,0,0,0.6);
+font-weight: bold;
+}
+.fa{
+
+font-size: 1.3em;
+font-weight: bold;			
+}
+form{
+
+margin-top: 30px;
+}
+.c {
+
+width: 100%;
+padding: 10px;
+margin-bottom: 15px;
+font-size: 17px;
+border-radius: 5px;
+outline: none;
+border: none;
+border:2px solid gray;
+}
+
+/*label{
+
+font-size: 20px;
+font-weight: bold;
+font-color:green;
+}*/
+input[type=submit]{
+background: #000;
+border: none;
+color: #fff;
+font-size: 20px;
+font-weight: bold;
+margin-top: 20px;
+padding: 15px;
+cursor: pointer;
+}
+input[type=submit]:hover{
+background: grey;
+}
+p{
+text-align: center;
+color: black;
+
+}
+p a{
+text-decoration: none;
+font-weight: bold;
+}
+.up{
+color: black;
+font-weight: bold;
+font-size: 20px;
+}
+
+.ih-item {
+position: relative;
+-webkit-transition: all 0.35s ease-in-out;
+-moz-transition: all 0.35s ease-in-out;
+transition: all 0.35s ease-in-out;
+margin-left: 1000px;
+}
+.ih-item,
+.ih-item * {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+.ih-item a {
+color: #333;
+}
+.ih-item a:hover {
+text-decoration: none;
+}
+.ih-item img {
+width: 100%;
+height: 100%;
+}
+
+.ih-item.circle {
+position: relative;
+width: 220px;
+height: 220px;
+border-radius: 50%;
+margin-left: 0%;
+margin-top: 100px;
+}
+.ih-item.circle .img {
+position: relative;
+width: 100%;
+height: 100%;
+border-radius: 50%;
+}
+.ih-item.circle .img:before {
+position: absolute;
+display: block;
+content: '';
+width: 100%;
+height: 100%;
+border-radius: 50%;
+box-shadow: inset 0 0 0 16px rgba(255, 255, 255, 0.6), 0 1px 2px rgba(0, 0, 0, 0.3);
+-webkit-transition: all 0.35s ease-in-out;
+-moz-transition: all 0.35s ease-in-out;
+transition: all 0.35s ease-in-out;
+}
+.ih-item.circle .img img {
+border-radius: 50%;
+}
+.ih-item.circle .info {
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+text-align: center;
+border-radius: 50%;
+-webkit-backface-visibility: hidden;
+backface-visibility: hidden;
+}
+
+
+
+.ih-item.circle.effect3.left_to_right .img {
+-webkit-transform: scale(1) translateX(0);
+-moz-transform: scale(1) translateX(0);
+-ms-transform: scale(1) translateX(0);
+-o-transform: scale(1) translateX(0);
+transform: scale(1) translateX(0);
+}
+.ih-item.circle.effect3.left_to_right .info {
+-webkit-transform: translateX(-100%);
+-moz-transform: translateX(-100%);
+-ms-transform: translateX(-100%);
+-o-transform: translateX(-100%);
+transform: translateX(-100%);
+}
+.ih-item.circle.effect3.left_to_right a:hover .img {
+-webkit-transform: scale(0.5) translateX(100%);
+-moz-transform: scale(0.5) translateX(100%);
+-ms-transform: scale(0.5) translateX(100%);
+-o-transform: scale(0.5) translateX(100%);
+transform: scale(0.5) translateX(100%);
+}
+.ih-item.circle.effect3.left_to_right a:hover .info {
+opacity: 1;
+-webkit-transform: translateX(0);
+-moz-transform: translateX(0);
+-ms-transform: translateX(0);
+-o-transform: translateX(0);
+transform: translateX(0);
+}
+.ih-item.circle.effect3 .img {
+z-index: 11;
+-webkit-transition: all 0.35s ease-in-out;
+-moz-transition: all 0.35s ease-in-out;
+transition: all 0.35s ease-in-out;
+}
+.ih-item.circle.effect3.colored .info {
+background: #1a4a72;
+}
+.ih-item.circle.effect3 .info {
+background: #333333;
+opacity: 0;
+pointer-events: none;
+-webkit-transition: all 0.35s ease-in-out;
+-moz-transition: all 0.35s ease-in-out;
+transition: all 0.35s ease-in-out;
+}
+.ih-item.circle.effect3 .info h3 {
+color: #fff;
+text-transform: uppercase;
+position: relative;
+letter-spacing: 2px;
+font-size: 22px;
+margin: 0 30px;
+padding: 55px 0 0 0;
+height: 110px;
+text-shadow: 0 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+.ih-item.circle.effect3 .info p {
+color: #bbb;
+padding: 10px 5px;
+font-style: italic;
+margin: 0 30px;
+font-size: 12px;
+border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+.col-sm-6 {
+position: relative;
+width: 220px;
+height: 220px;
+border-radius: 50%;
+margin-left: 450px;
+margin-top: -320px;
+}
+.col-sm-8 {
+position: relative;
+width: 220px;
+height: 220px;
+border-radius: 50%;
+margin-left: 450px;
+margin-top: -320px;
+}
+table{
+border: 1px #000;
+}
+
+    
+    
+    </style>
+</head>
+<body>
+    <div class='menu'>
+  <span class='toggle'>
+    <i></i>
+    <i></i>
+    <i></i>
+  </span>
+  <div class='menuContent'>
+    <ul>
+      <li><a href="#home">HOME</a></li>
+          <li><a href="#Login">LOGIN</a></li>
+          <li><a href="#About">TEAM</a></li>
+          <li><a href="#Contact">ABOUT US</a></li>
+    </ul>
+  </div>
+</div>
+<section id="home">
+			
+  <div id="section1">
+<div>
+     <h1 class="ch" style="font-size: 100px; font-family:Lucida Console ;">
+        <span style="color:white">cho</span><span style="color:white">ix</span><span style="color:rgb(247, 76, 161)">on</span></h1></div>
+
+
+<div class="searchBox"  style=" margin-top:20px;">
+
+            <input class="searchInput" id="search_item" type="text" name="" placeholder="Search">
+            <button class="searchButton" onclick="gotofunction()" href="#">
+                <i class="material-icons">
+                    search
+                </i>
+            </button>
+            <script>
+              function gotofunction() {
+                window.location.href = "http://localhost:4002/index2/"+document.getElementById("search_item").value;
+              }
+            </script>
+     </div>
+    </div>
+  </section>
+
+  
+  <section id="Login">
+    <div class="wrap">
+<h1 class="h">Log In With</h1>
+ <div class="social-media">
+   <button class="b"><a href="#"><i class="fa fa-facebook"></i> Facebook</a></button>	
+   <button class="b"><a href="#"><i class="fa fa-google"></i>  	Google</a></button>	 	
+ </div>	
+   <form action="">
+   <label class="up"> Username:</label><br>
+     <input class="c" type="text">
+       <label class=up> Password:</label><br>
+         <input  class="c" type="Password">
+           <input class="c" type="submit" value="Log In">
+
+   </form>
+
+ <p>Not a Member?<a href="Sign_up.html"> Sign Up Now</a></p>	
+
+</div>
+
+  </section>
+
+  <section id="About">
+  
+    <div class="row">
+<div class="col-sm-5">
+
+<!-- normal -->
+<div class="ih-item circle effect3 left_to_right"><a href="#">
+    <div class="img"><img src="4.jpg" alt="img"></div>
+    <div class="info">
+      <h3>Patel Meet D.</h3>
+      <p>Description goes here</p>
+    </div></a></div>
+<!-- end normal -->
+
+</div>
+
+<div class="col-sm-6">
+
+<!-- normal -->
+<div class="ih-item circle effect3 left_to_right"><a href="#">
+    <div class="img"><img src="5.jpg" alt="img"></div>
+    <div class="info">
+      <h3>Keya Bhavsar</h3>
+      <p>Description goes here</p>
+    </div></a></div>
+<!-- end normal -->
+
+</div>
+
+<div class="col-sm-7">
+
+<!-- normal -->
+<div class="ih-item circle effect3 left_to_right"><a href="#">
+    <div class="img"><img src="5.jpg" alt="img"></div>
+    <div class="info">
+      <h3>Janvi Solanki</h3>
+      <p>Description goes here</p>
+    </div></a></div>
+<!-- end normal -->
+
+</div>
+
+<div class="col-sm-8">
+
+<!-- normal -->
+<div class="ih-item circle effect3 left_to_right"><a href="#">
+    <div class="img"><img src="4.jpg" alt="img"></div>
+    <div class="info">
+      <h3>Patel Utsav</h3>
+      <p>Description goes here</p>
+    </div></a></div>
+<!-- end normal -->
+
+</div>
+
+<!--  -->
+</div>
+
+  </section>
+  <section id="Contact">
+    <h2>CONTACT SECTION</h2>
+    </section>
+
+
+ 
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+   ></script>
+<script>
+    $('.toggle').on('click', function() {
+	$('.menu').toggleClass('active');
+});
+    
+</script>
+</body>
+</html>

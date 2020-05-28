@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" href="E:/project/Login_v5/Login_v5/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="E:/project/Login_v5/Login_v5/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="E:/project/Login_v5/Login_v5/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="E:/project/Login_v5/Login_v5/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="E:/project/Login_v5/Login_v5/vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="E:/project/Login_v5/Login_v5/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="E:/project/Login_v5/Login_v5/vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="E:/project/Login_v5/Login_v5/vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="E:/project/Login_v5/Login_v5/vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="E:/project/Login_v5/Login_v5/css/util.css">
+	<link rel="stylesheet" type="text/css" href="E:/project/Login_v5/Login_v5/css/main.css">
+ <style>
+
+
+body {
+  margin: 0;
+  background-image: url('images/bgimage2.jpg');
+
+}
+
+#navbar {
+  background-color: #333;
+  position: fixed;
+  top: -50px;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+  
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.ch{
+                text-align:center;
+                position:absolute;
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+}
+
+
+
+#section1{
+    height: 800px;
+    background-size: cover;
+    display: inline-block;
+    width: 100%;    
+}
+#section2{
+    height: 800px;
+    display: inline-block;
+    width: 100%;
+}
+
+
+ 
+  
+         
+.searchBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:  translate(-50%,50%);
+    background: #2f3640;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+
+}
+
+.searchBox:hover > .searchInput {
+    width: 240px;
+    padding: 0 6px;
+}
+
+.searchBox:hover > .searchButton {
+  background: white;
+  color : #2f3640;
+}
+
+.searchButton {
+    color: white;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+.searchInput {
+    border:none;
+    background: none;
+    outline:none;
+    float:left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+}
+
+    
+@media screen and (max-width: 620px) {
+.searchBox:hover > .searchInput {
+    width: 150px;
+    padding: 0 6px;
+}
+}
+    
+
+      
+</style>
+
+</head>
+<body >
+    <div id ="navbar">
+      <a href="#section1">Home</a>
+      <a href="#section2">login</a> 
+       <a href="#section3">About Us </a>
+         <a href="#section4"> Team</a>  
+        <a href="#section5">Contact</a> 
+    </div>
+        <div id="section1"><div>
+         <h1 class="ch" style="font-size: 100px; font-family:Lucida Console ;">
+            <span style="color:white">cho</span><span style="color:white">ix</span><span style="color:rgb(247, 76, 161)">on</span></h1></div>
+        <div class="searchBox"  style=" margin-top:20px;">
+
+                <input class="searchInput"type="text" name="" placeholder="Search">
+                <button class="searchButton" href="#">
+                    <i class="material-icons">
+                        search
+                    </i>
+                </button>
+        
+
+         </div>
+         </div>
+         <div id="section2">
+         <div id = "content">
+		
+        
+        
+        <div class="limiter">
+            <div class="container-login100" >
+                <div class="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33">
+                    <form class="login100-form validate-form flex-sb flex-w">
+                        <span class="login100-form-title p-b-53">
+                            Sign In With
+                        </span>
+    
+                        <a href="#" class="btn-face m-b-20">
+                            <i class="fa fa-facebook-official"></i>
+                            Facebook
+                        </a>
+    
+                        <a href="#" class="btn-google m-b-20">
+                            <img src="E:/project/Login_v5/Login_v5/images/icons/icon-google.png" alt="GOOGLE">
+                            Google
+                        </a>
+                        
+                        <div class="p-t-31 p-b-9">
+                            <span class="txt1">
+                                Username
+                            </span>
+                        </div>
+                        <div class="wrap-input100 validate-input" data-validate = "Username is required">
+                            <input class="input100" type="text" name="username" >
+                            <span class="focus-input100"></span>
+                        </div>
+                        
+                        <div class="p-t-13 p-b-9">
+                            <span class="txt1">
+                                Password
+                            </span>
+                            <a href="#" class="txt2 bo1 m-l-5">Forgot?
+                            </a>
+                        </div>
+                        <div class="wrap-input100 validate-input" data-validate = "Password is required">
+                            <input class="input100" type="password" name="pass" >
+                            <span class="focus-input100"></span>
+                        </div>
+    
+                        <div class="container-login100-form-btn m-t-17">
+                            <button class="login100-form-btn">
+                                Sign In
+                            </button>
+                        </div>
+    
+                        <div class="w-full text-center p-t-55">
+                            <span class="txt2">
+                                Not a member?
+                            </span><a href="#" class="txt2 bo1">
+                                Sign up now
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+         </div>
+         
+         <script>
+            // When the user scrolls down 20px from the top of the document, slide down the navbar
+            window.onscroll = function() {scrollFunction()};
+            
+            function scrollFunction() {
+              if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("navbar").style.top = "0";
+              } else {
+                document.getElementById("navbar").style.top = "-50px";
+              }
+            }
+            </script>
+        
+	<script src="E:/project/Login_v5/Login_v5/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+        <script src="E:/project/Login_v5/Login_v5/vendor/animsition/js/animsition.min.js"></script>
+    <!--===============================================================================================-->
+        <script src="E:/project/Login_v5/Login_v5/vendor/bootstrap/js/popper.js"></script>
+        <script src="E:/project/Login_v5/Login_v5/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+        <script src="E:/project/Login_v5/Login_v5/vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+        <script src="E:/project/Login_v5/Login_v5/vendor/daterangepicker/moment.min.js"></script>
+        <script src="E:/project/Login_v5/Login_v5/vendor/daterangepicker/daterangepicker.js"></script>
+    <!--===============================================================================================-->
+        <script src="E:/project/Login_v5/ogin_v5/vendor/countdowntime/countdowntime.js"></script>
+    <!--===============================================================================================-->
+        <script src="E:/project/Login_v5/Login_v5/js/main.js"></script>
+        
+        
+           
+           
+    </body>
+</html>
+
